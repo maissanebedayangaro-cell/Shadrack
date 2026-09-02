@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>devoir</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="devoir">
+    <h1>selectionner les devoirs:<br></h1>
+    <form action="{{ url_for('tableau') }}" method="post">
+        {% for m in matieres %}
+            <input type="hidden" name="matiere" value="{{m}}">
+        {% endfor %}
+
+    <input type="checkbox" name="devoir" value="Devoir1"> Devoir1 <br>
+    <input type="checkbox" name="devoir" value="Devoir2"> Devoir2 <br>
+    <input type="checkbox" name="devoir" value="Devoir3"> Devoir3 <br>
+     <button type="submit" class="btn">Continuer</button>
+    </form>
+</body>
+</html>

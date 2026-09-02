@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>matiere</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="matiere">
+    <h1>selectionner les matieres:</h1>
+    <form action="{{ url_for('page_devoir') }}" method="post" >
+
+        <input type="checkbox" name="matiere" value="Maths"> Maths <br>
+        <input type="checkbox" name="matiere" value="Français"> Français <br>
+        <input type="checkbox" name="matiere" value="Physique-chimie"> Physique-chimie <br>
+        <input type="checkbox" name="matiere" value="SES"> SES <br>
+        <input type="checkbox" name="matiere" value="SVT"> SVT <br>
+        <input type="checkbox" name="matiere" value="Anglais"> Anglais <br>
+        <input type="checkbox" name="matiere" value="EPS"> EPS <br>
+        <input type="checkbox" name="matiere" value="Histoire"> Histoire <br>
+        <input type="checkbox" name="matiere" value="Ecofa"> Ecofa <br>
+        
+    <button type="submit" class="btn">Continuer</button>
+    </form>
+</body>
+</html>
